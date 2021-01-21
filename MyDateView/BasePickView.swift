@@ -96,8 +96,11 @@ class BasePickView: UIView {
     @objc func dismissView() {
         var frame = contentView.frame
         frame.origin.y = frame.origin.y + pickerViewHeight
-        contentView.frame = frame
-        self.removeFromSuperview()
+        UIView.animate(withDuration: 0.3) {
+            self.contentView.frame = frame
+        } completion: { (finished) in
+            self.removeFromSuperview()
+        }
     }
     
     @objc func cancelClick(button:UIButton) {
@@ -114,7 +117,9 @@ class BasePickView: UIView {
         window?.bringSubviewToFront(self)
         var frame = contentView.frame
         frame.origin.y = frame.origin.y - contentView.frame.size.height
-        contentView.frame = frame
+        UIView.animate(withDuration: 0.3) {
+            self.contentView.frame = frame
+        }
         
     }
     
