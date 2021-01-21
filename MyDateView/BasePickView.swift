@@ -61,9 +61,7 @@ class BasePickView: UIView {
         titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont.systemFont(ofSize: 16)
         titleLabel.textAlignment = .center
-        //titleLabel.backgroundColor = UIColor.blue
         topView.addSubview(titleLabel)
-//        titleLabel.center = CGPoint.init(x: topView.frame.size.width * 0.5, y: topView.frame.size.height * 0.5)
         cancelButton = UIButton.init(frame: CGRect.init(x: 10, y: 0, width: 50, height: topView.frame.size.height))
         cancelButton.setTitle("取消", for: .normal)
         cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
