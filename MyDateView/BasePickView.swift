@@ -4,6 +4,7 @@
 //
 //  Created by Myron on 2021/1/20.
 //
+//  基类，子类继承，重写initPickView方法初始化
 
 import Foundation
 import UIKit
@@ -24,6 +25,7 @@ class BasePickView: UIView {
         }
     }
     private var titleLabel: UILabel!
+    // 显示title名字
     var titleString: String? {
         didSet{
             titleLabel.text = titleString
